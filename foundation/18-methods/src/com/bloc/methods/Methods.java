@@ -32,12 +32,7 @@ public class Methods extends Object {
 	 * @return the logical opposite of the original
 	 */
 	public boolean giveMeTheOpposite(boolean original) {
-		/************************************************
-		 * Your work goes here
-		 ************************************************/
-
-		// You are free to modify the return statement
-		return false;
+		return !original;
 	}
 
 	/*
@@ -57,9 +52,9 @@ public class Methods extends Object {
 	 * @return nothing
 	 */
 	public void flipTheSign(int[] numbers) {
-		/************************************************
-		 * Your work goes here
-		 ************************************************/
+		for (int i = 0; i < numbers.length; i++) {
+			numbers[i] = numbers[i] - (2*numbers[i]);
+		}
 	}
 
 
@@ -87,12 +82,15 @@ public class Methods extends Object {
 	 * @return an array of booleans
 	 */
 	public boolean[] boolsRule(int floor, int[] someNumbers) {
-		/************************************************
-		 * Your work goes here
-		 ************************************************/
-
-		// You are free to modify the return statement
-		return new boolean [0];
+        boolean [] newArray = new boolean[someNumbers.length];
+		for (int i = 0; i < someNumbers.length; i++) {
+			if (someNumbers[i] >= floor) {
+				newArray[i] = true;	
+			}
+			else newArray[i] = false;	
+		}
+		
+		return newArray;
 	}
 
 	/*
@@ -114,12 +112,20 @@ public class Methods extends Object {
 	 * @return an array of length 2: {min, max}
 	 */
 	public int[] getMinAndMax(int[] someNumbers) {
-		/************************************************
-		 * Your work goes here
-		 ************************************************/
-
-		// You are free to modify the return statement
-		return new int[2];
+        int [] newArray = new int[2];
+        newArray[0] = someNumbers[0];
+        newArray[1] = someNumbers[0];
+        for (int i = 0; i < someNumbers.length; i++) {
+            if(someNumbers[i] < newArray[0]) {
+                    newArray[0] = someNumbers[i];
+            }
+            
+            if(someNumbers[i] > newArray[1]) {
+                    newArray[1] = someNumbers[i];
+            }
+        
+        }
+		return newArray;
 	}
 
 
