@@ -14,6 +14,15 @@ class PopSong extends Song {
 	 *	ASSIGNMENT:
 	 *	Create the first PopSong constructor
 	/************************************************/
+    PopSong() {
+		Artist fatMike = new Artist("Fat","Mike");
+		Artist nofxMembers[] = {fatMike} ;
+		Ensemble nofx = new Ensemble(nofxMembers);
+		this.mEnsemble = nofx;
+		this.mTitle = "Dinosaurs Will Die";
+		this.mYearReleased = 2000;
+		this.mWeeksOnBillboard = 10;
+	}
 
 	/*
 	 * PopSong
@@ -27,6 +36,12 @@ class PopSong extends Song {
 	 *	ASSIGNMENT:
 	 *	Create the second PopSong constructor
 	/************************************************/
+    PopSong(Ensemble ensemble, String title) {
+		this.mEnsemble = ensemble;
+		this.mTitle = title;
+		this.mYearReleased = 0;
+		this.mWeeksOnBillboard = 10;
+	}
 
 	/*
 	 * PopSong
@@ -41,6 +56,12 @@ class PopSong extends Song {
 	 *	ASSIGNMENT:
 	 *	Create the third PopSong constructor
 	/************************************************/
+    PopSong(Ensemble ensemble, String title, int yearReleased) {
+		this.mEnsemble = ensemble;
+		this.mTitle = title;
+		this.mYearReleased = yearReleased;
+		this.mWeeksOnBillboard = 0;
+	}
 
 	/*
 	 * PopSong
@@ -55,4 +76,11 @@ class PopSong extends Song {
 	 *	ASSIGNMENT:
 	 *	Create the fourth PopSong constructor
 	/************************************************/
+    PopSong(Ensemble ensemble, String title, int yearReleased, int weeksOnBillboard) {
+		this.mEnsemble = ensemble;
+		this.mTitle = title;
+		this.mYearReleased = yearReleased;
+		this.mWeeksOnBillboard = weeksOnBillboard;
+	}
+    
 }
