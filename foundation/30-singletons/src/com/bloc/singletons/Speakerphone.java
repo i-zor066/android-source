@@ -145,10 +145,11 @@ public class Speakerphone extends Object {
 	public void shoutMessage(Talker talker, Class<?> cls) {
 		Iterator<Listener> recepients = mListenerList.iterator();
 		String shout = talker.getMessage();
-		if (recepients.hasNext() && recepients.next().getClass().isAssignableFrom(cls))  {
-			recepients.next().onMessageReceived(shout);
+		for (Listener listener : mListenerList){
+			if (recepients.next().getClass().isAssignableFrom(cls)) {
+				listener.onMessageReceived(shout);
+			}
 		}
-		
 	}
 
 }
