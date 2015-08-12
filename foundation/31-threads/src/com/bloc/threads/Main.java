@@ -15,7 +15,7 @@ public class Main extends Object {
 		 *	Thread, use the ImageGetter class.
 		/************************************************/
 
-        new ImageGetter("https://www.google.com/images/srpr/logo11w.png", true).start();
+        new ImageGetter("https://www.google.com/images/srpr/logo11w.png", false).start();
 
 		/************************************************
 		 *	ASSIGNMENT:

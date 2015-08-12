@@ -46,9 +46,13 @@ public class ImageGetter extends Thread {
 			File outputfile = new File("google_logo.png");
 			ImageIO.write(bufferedImage, "png", outputfile);
 			if ("/".equals(System.getProperties().getProperty("file.separator"))) {
-				Runtime.getRuntime().exec("open google_logo.png");
+				if (mOpenWhenCompleted) {
+					Runtime.getRuntime().exec("open google_logo.png");
+				}
 			} else {
-				Runtime.getRuntime().exec("google_logo.png");
+				if (mOpenWhenCompleted) {
+					Runtime.getRuntime().exec("google_logo.png");
+				}
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
